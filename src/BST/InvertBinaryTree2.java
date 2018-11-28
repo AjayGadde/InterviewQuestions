@@ -1,6 +1,6 @@
 package BST;
 
-public class InvertBinaryTree {
+public class InvertBinaryTree2 {
 
 // https://leetcode.com/articles/invert-binary-tree/
     public static void main(String[] args) {
@@ -14,7 +14,7 @@ public class InvertBinaryTree {
         bst.insert(root, 13);
         bst.preOrderTraversal(root);
 
-        InvertBinaryTree invertBinaryTree = new InvertBinaryTree();
+        InvertBinaryTree2 invertBinaryTree = new InvertBinaryTree2();
         invertBinaryTree.invertRecursive(root);
         System.out.println("*********");
         bst.preOrderTraversal(root);
