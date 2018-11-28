@@ -3,10 +3,10 @@ package BST;
 import java.util.LinkedList;
 import java.util.Queue;
 
-public class Basics {
+public class BST {
     public static void main(String[] args) {
 
-        Basics obj = new Basics();
+        BST obj = new BST();
         Node root = new Node();
         root.value = 10;
         // insertion
