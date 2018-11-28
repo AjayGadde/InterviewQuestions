@@ -1,4 +1,4 @@
-package Others;
+package LinkedList;
 
 public class LRUCacheNode {
     int key;
