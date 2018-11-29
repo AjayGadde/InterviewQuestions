@@ -14,13 +14,11 @@ public class InsertInterval7b {
         intervalList.add(new Interval(8,10));
         intervalList.add(new Interval(12,16));
         insertInterval7b.merge(intervalList, new Interval(4,9));
-
     }
 
 
     public List<Interval> merge(List<Interval> intervals, Interval newInterval){
         List<Interval> result = new ArrayList<Interval>();
-
         for(Interval interval: intervals){
             if(interval.end < newInterval.start){
                 result.add(interval);}
