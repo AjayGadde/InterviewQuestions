@@ -27,7 +27,6 @@ public class ValidPalindrome18 {
             }
         }
         return true;
-
     }
 
 
