@@ -12,7 +12,8 @@ MinMeetingRooms4a minMeetingRooms4a = new MinMeetingRooms4a();
         Interval[] intervals = new Interval[]{
                 new Interval(0,30),
                 new Interval(5,10),
-                new Interval(20,40)
+                new Interval(20,23),
+                new Interval(25,36)
         };
 
         System.out.println(minMeetingRooms4a.process(intervals));
