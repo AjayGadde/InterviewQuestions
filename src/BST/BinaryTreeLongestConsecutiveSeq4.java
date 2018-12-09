@@ -14,7 +14,6 @@ public class BinaryTreeLongestConsecutiveSeq4 {
 
     int maxlength = 0;
 
-
     public int longestConsecutive(Node root){
         if(root == null){
             return 0;
