@@ -15,15 +15,14 @@ public class BTFromInOrderAndPostOrder {
         int postStart = 0;
         int postEnd = postorder.length-1;
         btFromInOrderAndPostOrder.buildTree(inorder,inStart,inEnd,postorder,postStart,postEnd);
-
-
-
     }
 
 
     public Node buildTree(int[] inorder, int instart, int inEnd, int[] postOrder, int postStart, int postEnd){
 
-        if(instart > inEnd ){
+
+
+        if(instart > inEnd || postStart > postEnd ){
             return null;
         }
 

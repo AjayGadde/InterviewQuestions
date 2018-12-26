@@ -13,7 +13,7 @@ public class InOrderSuccessorInBST30 {
         Node next = null;
         while(c!= null && c.value != target.value){
             if(target.value < c.value){
-                node = c;
+                next = c;
                 c = c.left;
             }else{
                 c = c.right;

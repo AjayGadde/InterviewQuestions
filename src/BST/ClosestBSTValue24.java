@@ -21,6 +21,11 @@ public class ClosestBSTValue24 {
             return;
         }
 
+        // this condition is missing in programcreek
+        if(node.value == target){
+            return;
+        }
+
         if(Math.abs(node.value-target)< min){
             min = Math.abs(node.value-target);
             goal = node.value;
