@@ -2,7 +2,9 @@ package Arrays;
 
 
 
-// https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/solution/
+
+
+// https://www.geeksforgeeks.org/find-first-and-last-positions-of-an-element-in-a-sorted-array/
 
 import java.util.Arrays;
 
@@ -10,44 +12,61 @@ public class SearchForARange47 {
 
 
     public static void main(String[] args) {
-        SearchForARange47 searchForARange47 = new SearchForARange47();
-        int[] nums = new int[]{5,7,7,8,8,10};
-        int[] ans = searchForARange47.searchRange(nums, 8);
-        System.out.println(Arrays.toString(ans));
+//        SearchForARange47 searchForARange47 = new SearchForARange47();
+//        int[] nums = new int[]{5,7,7,8,8,10};
+//    //    int[] ans = searchForARange47.searchRange(nums, 8);
+//        System.out.println(Arrays.toString(ans));
     }
 
 
 
-    public int[] searchRange(int[] nums, int target){
-        int[] targetRange = {-1,-1};
-        int leftIndex = extremeInsertionIndex(nums, target, true);
+    public int first(int[] arr, int first, int last, int target, int n){
 
-        if(leftIndex == nums.length || nums[leftIndex] != target){
-            return targetRange;
-        }
+        if(last > first ) {
+            int mid = first + (last-first)/2;
 
-        targetRange[0] = leftIndex;
-        targetRange[1] = extremeInsertionIndex(nums, target, false)-1;
-        return targetRange;
-    }
+            if ((mid == 0 || arr[mid-1]< target) && arr[mid] == target) {
 
+                return mid;
 
-    private int extremeInsertionIndex(int[] nums, int target, boolean left){
-
-        int lo = 0;
-        int hi = nums.length;
-
-        while(lo < hi){
-            int mid = (lo+hi)/2;
-
-            if(nums[mid] > target || (left &&  target == nums[mid])){
-                hi = mid;
+            } else if (target > mid){
+                return first(arr, mid+1, last, target, n);
             }else{
-                lo = mid+1;
+                return first(arr, first, mid-1, target, n);
             }
 
         }
-        return lo;
+        return -1;
+
+
     }
+
+
+    public int last(int[] arr, int first, int last, int target, int n){
+
+        if(last > first ) {
+            int mid = first + (last-first)/2;
+
+            if ((mid ==n-1 || arr[mid+1]> target) && arr[mid] == target) {
+
+                return mid;
+
+            } else if (target > mid){
+                return first(arr, mid+1, last, target, n);
+            }else{
+                return first(arr, first, mid-1, target, n);
+            }
+
+        }
+        return -1;
+
+
+
+    }
+
+
+
+
+
 
 }
