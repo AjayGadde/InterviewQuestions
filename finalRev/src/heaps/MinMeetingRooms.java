@@ -6,10 +6,6 @@ import java.util.PriorityQueue;
 
 public class MinMeetingRooms {
 
-
-
-
-
     public int minMeetingRoomsReq(Interval[] intervals){
 
         Arrays.sort(intervals, new Comparator<Interval>() {
@@ -32,11 +28,6 @@ public class MinMeetingRooms {
             queue.offer(intervals[i].end);
         }
     return count;
-
-
-
-
-
     }
 
 
